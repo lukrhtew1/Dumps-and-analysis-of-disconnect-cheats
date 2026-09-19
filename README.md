@@ -76,7 +76,7 @@ Cormem is just the short lived BYVOD:
 
 1. Load cormem
 2. Spam map/unmap to walk / patch what they need
-3. Plant lasting r/w into steamwebhelper
+3. Plant kernel r/w into steamwebhelper
 4. Unload
 
 This also matches the steam close BSOD, leftover bad PFN mappings into steam host after cormem is gone.
