@@ -5,7 +5,7 @@ Session
     steamwebhelper  x199
     SonyVegas.exe  x4
 
-Kernel size=8 System/(nonimage) probes (collapsed)
+Kernel size=8 System
   0x00000000001AEF80   hits=28195
   0x0000000005609008   hits=15201
   0x00000000056090C0   hits=12992
