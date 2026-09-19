@@ -1,0 +1,125 @@
+Session
+  caller_pids  00003C2C, 00004500
+  owners
+    System  x129533
+    steamwebhelper  x199
+    SonyVegas.exe  x4
+
+Kernel size=8 System/(nonimage) probes (collapsed)
+  0x00000000001AEF80   hits=28195
+  0x0000000005609008   hits=15201
+  0x00000000056090C0   hits=12992
+  0x00000000001AEC18   hits=5844
+  0x00000000001AEB48   hits=5473
+  0x000000000570AE28   hits=4076
+  0x00000000055C7000   hits=3995
+  0x00000000055C91F8   hits=3574
+  0x000000000570A438   hits=2048
+  0x000000000570A440   hits=2048
+  0x000000000570A448   hits=2048
+  0x000000000570A450   hits=2048
+  0x000000000570AE30   hits=2048
+  0x000000000570AE38   hits=2048
+  0x000000000570AE40   hits=2048
+  0x000000000570AE48   hits=2048
+  0x00000000055C91F0   hits=1900
+  0x000000000570A430   hits=1867
+  0x00000000055C71F8   hits=1851
+  0x000000000570A460   hits=1554
+  0x000000000570AE58   hits=1554
+  0x000000013B860148   hits=894
+  0x0000000449C6C490   hits=777
+  0x0000000449C6C498   hits=753
+  0x000000013B860140   hits=690
+  total_unique=1546  total_hits=125630
+
+kernel maps into modules
+  map phys=0x000000000354D000 size=8 kva=0xFFFFF80610D4D000 owner=System mod=ntoskrnl.exe+0x0014D000 data=0x0000000000000000
+  map phys=0x000000000402A420 size=8 kva=0xFFFFF8061182A420 owner=System mod=ntoskrnl.exe+0x00C2A420 data=0xFFFFC18FDE67E930
+  map phys=0x00000000040FC420 size=8 kva=0xFFFFF806118FC420 owner=System mod=ntoskrnl.exe+0x00CFC420 data=0xFFFFC18FDE702080
+  map phys=0x00000000034C8154 size=8 kva=0xFFFFF80610CC8154 owner=System mod=ntoskrnl.exe+0x000C8154 data=0x0552D900065E6400
+  map phys=0x00000000040FC510 size=8 kva=0xFFFFF806118FC510 owner=System mod=ntoskrnl.exe+0x00CFC510 data=0xFFFFE50000000000
+  map phys=0x000000011FE358D0 size=8 kva=0xFFFFF800A9E728D0 owner=System mod=amdkmdag.sys+0x009128D0 data=0xFFFFF800A9907720
+  map phys=0x000000011FE35B10 size=8 kva=0xFFFFF800A9E72B10 owner=System mod=amdkmdag.sys+0x00912B10 data=0xFFFFF800A9723F60
+
+cedartracelink maps (dll into steamwebhelper)
+  map phys=0x0000000277435EBF size=8 kva=0x00007FFEBAD93EBF owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EBF data=0x0000000000000000
+  map phys=0x0000000277435EC7 size=8 kva=0x00007FFEBAD93EC7 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EC7 data=0x0000000000000000
+  map phys=0x0000000277435EB7 size=8 kva=0x00007FFEBAD93EB7 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EB7 data=0x0000000000000000
+  map phys=0x0000000277435EB7 size=24 kva=0x00007FFEBAD93EB7 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EB7 data=0x00007FFEBAADA587
+  map phys=0x00000002EFEBFEBF size=8 kva=0x00007FF916813EBF owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EBF data=0x0000000000000000
+  map phys=0x00000002EFEBFEC7 size=8 kva=0x00007FF916813EC7 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EC7 data=0x0000000000000000
+  map phys=0x00000002EFEBFEB7 size=8 kva=0x00007FF916813EB7 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EB7 data=0x0000000000000000
+  map phys=0x00000002EFEBFEB7 size=24 kva=0x00007FF916813EB7 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EB7 data=0x00007FF91655A587
+
+steamwebhelper / sonyvegas (loader process)
+  map phys=0x000000016216D000 size=32 kva=0x000000709776C000 owner=steamwebhelper mod= data=0x0000000004000000
+  map phys=0x00000001737B14C0 size=64 kva=0x00007FFEE9E9C4C0 owner=SonyVegas.exe mod=ntdll.dll+0x0016C4C0 data=0x0000000100000058
+  map phys=0x00000001737C2FF0 size=16 kva=0x0000024F44B63FF0 owner=steamwebhelper mod= data=0x0000024F44B66630
+  map phys=0x0000000172708000 size=14 kva=0x0000024F44B8C000 owner=steamwebhelper mod= data=0x002E00320033004C
+  map phys=0x000000014DF9DFF0 size=16 kva=0x0000024F44BD3FF0 owner=steamwebhelper mod= data=0x0000024F44BD4250
+  map phys=0x000000017864C000 size=56 kva=0x0000024F4D7A7000 owner=steamwebhelper mod= data=0x0000024F4D77A000
+  map phys=0x000000017747C000 size=40 kva=0x0000024F44C25000 owner=steamwebhelper mod= data=0x0000024F4D208AD8
+  map phys=0x00000001785B4000 size=42 kva=0x0000024F4D77B000 owner=steamwebhelper mod= data=0x0073005C00730077
+  map phys=0x000000014B7C7000 size=32 kva=0x000000B72AE17000 owner=steamwebhelper mod= data=0x0000000004000000
+  map phys=0x000000014D90D4C0 size=64 kva=0x00007FF951DFC4C0 owner=SonyVegas.exe mod=ntdll.dll+0x0016C4C0 data=0x0000000100000058
+  map phys=0x000000014D81EFF0 size=16 kva=0x000001DB42023FF0 owner=steamwebhelper mod= data=0x000001DB42026630
+  map phys=0x000000014D862000 size=14 kva=0x000001DB4202B000 owner=steamwebhelper mod= data=0x002E005000540054
+  map phys=0x000000014DBB6000 size=26 kva=0x000001DB42033000 owner=steamwebhelper mod= data=0x006D006F00720068
+  map phys=0x000000014BBB8000 size=56 kva=0x000001DB42031000 owner=steamwebhelper mod= data=0x000001DB42048A70
+  map phys=0x000000014D98A000 size=8 kva=0x000001DB4202F000 owner=steamwebhelper mod= data=0x00000000DDDB739C
+  map phys=0x0000000153067000 size=40 kva=0x000001DB42091000 owner=steamwebhelper mod= data=0x000001DB420B0648
+  map phys=0x000000015961E000 size=40 kva=0x000001DB49EDA000 owner=steamwebhelper mod= data=0x000001DB495F65A8
+
+writess
+  write phys=0x0000000277435EBF old=0x0000000000000000 new=0x9131CE41DCAB0D9F owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EBF
+  write phys=0x0000000277435EC7 old=0x0000000000000000 new=0x785CB00FF777AC56 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EC7
+  write phys=0x00000002EFEBFEBF old=0x0000000000000000 new=0x76DFA96F9B75988D owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EBF
+  write phys=0x00000002EFEBFEC7 old=0x0000000000000000 new=0x76892387C89C2F39 owner=steamwebhelper mod=CedarTraceLink.dll+0x00313EC7
+
+plants
+  plant phys=0x0000000277435EB7 old=0x0000000000000000 new=0x00007FFEBAADA587 owner=steamwebhelper/00002FD0 mod=CedarTraceLink.dll+0x00313EB7 um=0x00007FFEBAADA587 um_mod=CedarTraceLink.dll+0x0005A587 um_bytes=48895C2410574883EC40488B0528BD2B004833C44889442430498BD9498BF883
+  clear phys=0x0000000277435EB7 old=0x00007FFEBAADA587 new=0x0000000000000000 owner=steamwebhelper/00002FD0 mod=CedarTraceLink.dll+0x00313EB7 um=0x00007FFEBAADA587 um_mod=CedarTraceLink.dll+0x0005A587 um_bytes=48895C2410574883EC40488B0528BD2B004833C44889442430498BD9498BF883
+  plant phys=0x00000002EFEBFEB7 old=0x0000000000000000 new=0x00007FF91655A587 owner=steamwebhelper/000033F0 mod=CedarTraceLink.dll+0x00313EB7 um=0x00007FF91655A587 um_mod=CedarTraceLink.dll+0x0005A587 um_bytes=48895C2410574883EC40488B0528BD2B004833C44889442430498BD9498BF883
+  clear phys=0x00000002EFEBFEB7 old=0x00007FF91655A587 new=0x0000000000000000 owner=steamwebhelper/000033F0 mod=CedarTraceLink.dll+0x00313EB7 um=0x00007FF91655A587 um_mod=CedarTraceLink.dll+0x0005A587 um_bytes=48895C2410574883EC40488B0528BD2B004833C44889442430498BD9498BF883
+
+kernel string scans
+  x406  \Windows\System32\svchost.exe
+  x12  \Windows\System32\csrss.exe
+  x6  \Windows\System32\smss.exe
+  x6  \Windows\System32\wininit.exe
+  x6  \Windows\System32\services.exe
+  x6  \Windows\System32\winlogon.exe
+  x6  \Windows\System32\LsaIso.exe
+  x6  \Windows\System32\lsass.exe
+  x6  \Windows\System32\dwm.exe
+  x6  \Windows\System32\spoolsv.exe
+  x6  \Windows\SysWOW64\vmnat.exe
+  x6  \Windows\SysWOW64\vmnetdhcp.exe
+  x6  \Windows\System32\dasHost.exe
+  x6  \Windows\System32\wlanext.exe
+  x6  \Windows\System32\conhost.exe
+  x6  \Windows\System32\sihost.exe
+  x6  \Windows\explorer.exe
+  x5  \Windows\System32\taskhostw.exe
+  x4  \Windows\System32\ctfmon.exe
+  x4  \Windows\System32\CompPkgSrv.exe
+  x2  \Windows\System32\dllhost.exe
+  x2  \App
+  x2  C:\Windows\SYSTEM32\ntdll.dll
+  x2  C:\Windows\System32\KERNEL32.DLL
+  x2  C:\Windows\System32\ADVAPI32.dll
+  x2  C:\Windows\System32\msvcrt.dll
+  x2  C:\Windows\System32\sechost.dll
+  x2  C:\Windows\System32\RPCRT4.dll
+  x2  C:\Windows\System32\bcrypt.dll
+  x2  C:\Windows\System32\WS2_32.dll
+  x2  C:\Windows\SYSTEM32\WINMM.dll
+  x2  C:\Windows\SYSTEM32\dbghelp.dll
+  x2  C:\Windows\SYSTEM32\USERENV.dll
+  x2  C:\Windows\System32\ucrtbase.dll
+  x2  C:\Windows\System32\CRYPT32.dll
+  x2  C:\Windows\System32\OLEAUT32.dll
+  x2  C:\Windows\System32\combase.dll
+  x2  C:\Windows\System32\WINTRUST.dll
+  x2  C:\Windows\SYSTEM32\IPHLPAPI.DLL
