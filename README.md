@@ -23,6 +23,7 @@ We have also provided all of the information in this repo, over to anti-cheats s
 ### Architecture
 
 Loader wise, this loads a vulnerable driver (cormem.sys) which has been dumped from disconnect a while ago, and they still use it.
+
 It is used primarily for physical read/write to prep their bypass.
 
 **Steam injected:** The cheat itself (which lives a dll, and is also dumped to system32 before being injected into steam) is injected into a specific steam sub-process, steamwebhelper.exe
@@ -33,7 +34,7 @@ We found that, once we closed steam with it injected, and we experienced a BSOD.
 
 - Bug check: MEMORY_MANAGEMENT (0x1A) subtype: 0x61948
 - Process: steamwebhelper.exe
-- Path: process had exited->MmCleanProcessAddressSpace -> VAD/PTE was torn down -> MiDerferenceIoPages
+- Path: process had exited -> MmCleanProcessAddressSpace -> VAD/PTE was torn down -> MiDerferenceIoPages
 - Bucket: 0x1a_61948_nt!MiDereferenceIoPages
 - Args: P2/P4 looked like a PFN (0x9c4d2)
 
@@ -45,6 +46,40 @@ The BSOD was evidence that:
 - A kernel phys/pte mapping was involved, usermode teardown alone can not clean it
 
 This lines up with the vulnerable driver planted a phys window into steamwebhelper, and leave steam with bad mappings -> kill steam -> MiDereferenceIoPages dies.
+
+---
+
+## Vulnerable Driver
+
+**Driver:** Teledyne DALSA Sapera `CORMEM.SYS`
+
+**Dispatch:** Opens `\\Device\\PhysicalMemory` and maps via ZwOpenSection/ZwMapViewOfSection
+
+### IOCTL Codes
+
+| Code | Name | Role |
+|------|------|------|
+| `0x22200C` | **MAPBUFFER** | Map physical range -> usermode VA |
+| `0x222010` | **UNMAPBUFFER** | Remove the view |
+
+Disconnects runtime traffic we captured when intercepting cormems ioctls were mostly just mapbuffer + unmapbuffer
+
+Around 482 unique phys targets, very hot pfns hit hundreds of times, some of the runs walk page aligned ranges.
+
+### Caller
+
+IOCTL caller was their loader process.
+
+### Takeaway
+
+Cormem is just the short lived BYVOD:
+
+1. Load cormem
+2. Spam map/unmap to walk / patch what they need
+3. Plant lasting r/w into steamwebhelper
+4. Unload
+
+This also matches the steam close BSOD, leftover bad PFN mappings into steam host after cormem is gone.
 
 ---
 
