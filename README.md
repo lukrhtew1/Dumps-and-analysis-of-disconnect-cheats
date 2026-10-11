@@ -42,7 +42,7 @@ The pattern means pages were mapped inside of steamwebhelper in a non-standard w
 
 The BSOD was evidence that:
 
-- Their lasting access was tied to steamwebhelper
+- Their usermode was tied to steamwebhelper
 - A kernel phys/pte mapping was involved, usermode teardown alone can not clean it
 
 This lines up with the vulnerable driver planted a phys window into steamwebhelper, and leave steam with bad mappings -> kill steam -> MiDereferenceIoPages dies.
