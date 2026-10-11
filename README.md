@@ -72,8 +72,6 @@ IOCTL caller was their loader process.
 
 ### Takeaway
 
-Cormem is just the short lived BYVOD:
-
 1. Load cormem
 2. Spam map/unmap to walk / patch what they need
 3. Plant kernel r/w into steamwebhelper
